@@ -8,7 +8,7 @@ var bio = {
 		"twitter" : "@gregormendoza",
 		"location" : "Zona F, 23 de Enero, Caracas, Venezuela"
 	},
-	"welcomeMessage" : "",
+	"welcomeMessage" : "The Web With Ethics",
 	"skills" : ["determination", "fast learner", "hardcore gamer", "multitasking"],
 	"bioPic" : "images/me.png",
 	display: function(){

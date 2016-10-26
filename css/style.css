@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .clear-fix {
@@ -24,9 +24,13 @@ h6 {
   padding: 0 5%;
 }
 
+.education-entry h3 {
+  padding-left: 0;
+}
+
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #9ed856;
   line-height: 48px;
   display: inline;
 }
@@ -61,6 +65,9 @@ h5 {
 
 }
 
+.role {
+  color: #fff;
+}
 
 .date-text {
   font-style: italic;
@@ -90,6 +97,13 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
+  word-wrap: break-word;
+}
+
+.link-modified {
+  margin: 0;
+  display: inline;
+  padding: 5px;
 }
 
 .welcome-message {
@@ -100,16 +114,16 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #9ed856;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #9ed856;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #9ed856;
 }
 
 .white-text {
@@ -129,7 +143,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #212934;
 }
 
 .flex-box {
@@ -139,6 +153,10 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+}
+
+.flex-item {
+  margin-bottom: 10px;
 }
 
 .flex-column {
@@ -157,14 +175,24 @@ ul {
 }
 
 .biopic {
-  float: left;
+  width: 100%;
+}
+
+.biopic-container {
+  margin: 0 auto;
   padding: 10px;
   width: 200px;
-  display: none;
 }
 
 img {
-  padding: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.projectpic {
+  padding: 10px 10px 40px;
+  max-width: 450px;
+  float: left;
 }
 
 span {
@@ -175,30 +203,21 @@ span {
   text-align: center;
 }
 
-/* Media queries to handle various device widths */
-
-@media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+#topContacts .flex-item {
+  text-align: center;
 }
 
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+#workExperience,
+#projects {
+  padding: 20px 0 30px;
 }
 
-@media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+#education {
+  padding: 20px 0 40px;
+}
+
+#footerContacts {
+  background-color: #212934;
 }
 
 #map {
@@ -210,12 +229,68 @@ span {
 #mapDiv {
   height: 400px;
   width: 100%;
-  padding-bottom: 5%;
+  padding: 20px 0 87px;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+  #lets-connect {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .biopic-container {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #lets-connect {
+    margin-top: 10%;
+  }
+
+  #name,
+  .role {
+    display: block;
+    text-align: center;
+  }
+
+  .biopic-container {
+    width: 150px;
+  }
+
+  .clearfix {
+    clear: both;
+  }
+
+  #skills .flex-item {
+    text-align: center;
+  }
+
+  .welcome-message {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .center-content {
+    padding-top: 7.5%;
+  }
 }
 
 @media only screen and (min-width: 750px) {
   #skills-h3,
-  .biopic {
+  .biopic-container {
     display: block;
+  }
+
+  .biopic-container {
+    float: left;
+  }
+
+  .clearfix {
+    display: none;
   }
 }

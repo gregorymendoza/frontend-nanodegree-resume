@@ -226,6 +226,9 @@ projects.display = function() {
 
 projects.display();
 
+/*
+Adding Google Maps Interaction
+*/
 function locationizer(work_obj) {
     var locationArray = [];
 

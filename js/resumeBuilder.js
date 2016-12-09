@@ -27,10 +27,8 @@ var bio = {
         var formattedWelcomeMsg = HTMLwelcomeMsg.replace(data, bio.welcomeMessage);
         var formattedPic = HTMLbioPic.replace(data, bio.biopic);
 
-        $("#header").prepend(formattedRole);
-        $("#header").prepend(formattedName);
-        $("#header").append(formattedWelcomeMsg);
-        $("#header").append(formattedPic);
+        $("#header").prepend(formattedName, formattedRole);
+        $("#header").append(formattedWelcomeMsg, formattedPic);
 
         $("#topContacts, #footerContacts").append(formattedMobile, formattedEmail, formattedGitHub, formattedTwitter, formattedLocation);
 
@@ -100,7 +98,7 @@ var work = {
         "description": "Design and Development of UNEARTE Official Website"
     }, {
         "employer": "Central Bank of Venezuela",
-        "title": "Trainee",
+        "title": "Intern",
         "location": "Banco Central de Venezuela, Piso 16 Av. Nte. 2 Caracas, Venezuela",
         "dates": "2008",
         "description": "Document Digitalization and Database Handling in Excel"
@@ -142,10 +140,7 @@ education.display = function() {
             $(".education-entry").append(formattedSchoolMajor);
         }
 
-        $(".education-entry").append(formattedSchoolName);
-        $(".education-entry").append(formattedSchoolLocation);
-        $(".education-entry").append(formattedSchoolDegree);
-        $(".education-entry").append(formattedSchoolDates);
+        $(".education-entry").append(formattedSchoolName, formattedSchoolLocation, formattedSchoolDegree, formattedSchoolDates);
     });
 
     $(".education-entry").append(HTMLonlineClasses);
@@ -156,10 +151,7 @@ education.display = function() {
         var formattedOnlineDates = HTMLonlineDates.replace(data, onlineCourse.dates);
         var formattedOnlineURL = HTMLonlineURL.replace(data, onlineCourse.url).replace("#", onlineCourse.url);
 
-        $(".education-entry").append(formattedOnlineTitle);
-        $(".education-entry").append(formattedOnlineSchool);
-        $(".education-entry").append(formattedOnlineDates);
-        $(".education-entry").append(formattedOnlineURL);
+        $(".education-entry").append(formattedOnlineTitle, formattedOnlineSchool, formattedOnlineDates, formattedOnlineURL);
     });
 };
 
@@ -179,10 +171,7 @@ work.display = function() {
         var formattedDates = HTMLworkDates.replace(data, work.jobs[i].dates);
         var formattedDescription = HTMLworkDescription.replace(data, work.jobs[i].description);
 
-        $(".work-entry").append(formattedEmployerTitle);
-        $(".work-entry").append(formattedLocation);
-        $(".work-entry").append(formattedDates);
-        $(".work-entry").append(formattedDescription);
+        $(".work-entry").append(formattedEmployerTitle, formattedLocation, formattedDates, formattedDescription);
     }
 };
 
